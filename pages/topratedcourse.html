@@ -1,150 +1,219 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Course Slider</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Course Slider</title>
 
-  <link
-    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
-    rel="stylesheet"
-  />
-  <style>
-    body {
-      background-color: #2a83e2;
-      color: rgb(9, 9, 9);
-    }
-
-    .card {
-      background-color: #2e2e2e;
-      border: none;
-      border-radius: 12px;
-      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
-      color: white;
-    }
-
-    .card img {
-      height: 160px;
-      object-fit: contain;
-      padding: 10px;
-    }
-
-    .carousel-control-prev-icon,
-    .carousel-control-next-icon {
-      background-color: #ffffff;
-      border-radius: 50%;
-    }
-
-    .carousel-inner {
-      padding: 30px 0;
-    }
-
-    .enroll-btn {
-      background-color: orange;
-      border: none;
-    }
-
-    @media (max-width: 768px) {
-      .carousel-item .d-flex {
-        flex-direction: column;
-        align-items: center;
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        background-color: #ffffff;
+        color: rgb(9, 9, 9);
       }
-    }
-  </style>
-</head>
-<body>
 
-<div class="container py-5">
-  <h2 class="text-center mb-4">Top Rated Courses</h2>
-  <div id="courseCarousel" class="carousel slide" data-bs-ride="carousel">
-    <div class="carousel-inner">
+      .card {
+        background-color: #2e2e2e;
+        border: none;
+        border-radius: 12px;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+        color: white;
+      }
 
-      <div class="carousel-item active">
-        <div class="d-flex justify-content-center gap-4 flex-wrap">
-          <div class="card" style="width: 18rem;">
-            <img src="/assets/images/course 1.jpg" class="card-img-top" alt="JS">
-            <div class="card-body text-center">
-              <h5 class="card-title">Javascript</h5>
-              <p class="card-text">Master the fundamentals of JavaScript, the core 
-                language of the web. From variables to advanced DOM manipulation, 
-                this course empowers you to bring web pages to life.</p>
-              <button class="btn enroll-btn">Enroll</button>
+      .card img {
+        height: 160px;
+        object-fit: contain;
+        padding: 10px;
+      }
+
+      .carousel-control-prev-icon,
+      .carousel-control-next-icon {
+        background-color: #2d2828;
+        border-radius: 50%;
+      }
+
+      .carousel-inner {
+        padding: 30px 0;
+      }
+
+      .enroll-btn {
+        background-color: orange;
+        border: none;
+      }
+
+      @media (max-width: 768px) {
+        .carousel-item .d-flex {
+          flex-direction: column;
+          align-items: center;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="bg-primary text-white p-3">
+      <div class="container d-flex justify-content-between align-items-center">
+        <a href="/" class="nav-logo">
+          <img
+            src="/E_Learning_System/assets/images/image.jpg"
+            alt="EduSphere Logo"
+            width="150"
+            style="mix-blend-mode: multiply; background-color: white"
+          />
+        </a>
+        <h1 class="h3">Top Rated Courses</h1>
+        <nav>
+          <a
+            href="/E_Learning_System/pages/home.html"
+            class="btn btn-light btn-sm me-2"
+            >Home</a
+          >
+          <a
+            href="/E_Learning_System/pages/courses.html"
+            class="btn btn-light btn-sm me-2"
+            >Courses</a
+          >
+        </nav>
+      </div>
+    </header>
+    <div class="container py-5">
+      <h2 class="text-center mb-4">Top Rated Courses</h2>
+      <div id="courseCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="d-flex justify-content-center gap-4 flex-wrap">
+              <div class="card" style="width: 18rem">
+                <img
+                  src="/E_Learning_System/assets/images/course 1.jpg"
+                  class="card-img-top"
+                  alt="JS"
+                />
+                <div class="card-body text-center">
+                  <h5 class="card-title">Javascript</h5>
+                  <p class="card-text">
+                    Master the fundamentals of JavaScript, the core language of
+                    the web. From variables to advanced DOM manipulation, this
+                    course empowers you to bring web pages to life.
+                  </p>
+                  <button class="btn enroll-btn">Enroll</button>
+                </div>
+              </div>
+
+              <div class="card" style="width: 18rem">
+                <img
+                  src="/E_Learning_System/assets/images/course 4.png"
+                  class="card-img-top"
+                  alt="UX/UI"
+                />
+                <div class="card-body text-center">
+                  <h5 class="card-title">Start UP</h5>
+                  <p class="card-text">
+                    Understand the startup journey from ideation to scaling.
+                    Learn product-market fit, MVP development, fundraising, and
+                    building a sustainable business.
+                  </p>
+                  <button class="btn enroll-btn">Enroll</button>
+                </div>
+              </div>
+
+              <div class="card" style="width: 18rem">
+                <img
+                  src="/E_Learning_System/assets/images/course 8.jpg"
+                  class="card-img-top"
+                  alt="BA"
+                />
+                <div class="card-body text-center">
+                  <h5 class="card-title">Social Media Marketing</h5>
+                  <p class="card-text">
+                    Learn how to grow brands and engage audiences through
+                    platforms like Instagram, Facebook, and LinkedIn. This
+                    course covers content strategy, analytics, and ad campaigns
+                    to drive online success.
+                  </p>
+                  <button class="btn enroll-btn">Enroll</button>
+                </div>
+              </div>
             </div>
           </div>
 
-          <div class="card" style="width: 18rem;">
-            <img src="/assets/images/course 4.png" class="card-img-top" alt="UX/UI">
-            <div class="card-body text-center">
-              <h5 class="card-title">Start UP</h5>
-              <p class="card-text">Understand the startup journey 
-                from ideation to scaling. Learn product-market fit, 
-                MVP development, fundraising, and building a sustainable business.</p>
-              <button class="btn enroll-btn">Enroll</button>
-            </div>
-          </div>
+          <div class="carousel-item">
+            <div class="d-flex justify-content-center gap-4 flex-wrap">
+              <div class="card" style="width: 18rem">
+                <img
+                  src="/E_Learning_System/assets/images/course 12.png"
+                  class="card-img-top"
+                  alt="Node"
+                />
+                <div class="card-body text-center">
+                  <h5 class="card-title">Figma</h5>
+                  <p class="card-text">
+                    Dive into UI/UX design with Figma, a collaborative interface
+                    design tool. Learn to create wireframes, prototypes, and
+                    design systems for seamless user experiences.
+                  </p>
+                  <button class="btn enroll-btn">Enroll</button>
+                </div>
+              </div>
 
-          <div class="card" style="width: 18rem;">
-            <img src="/assets/images/course 8.jpg" class="card-img-top" alt="BA">
-            <div class="card-body text-center">
-              <h5 class="card-title">Social Media Marketing</h5>
-              <p class="card-text">Learn how to grow brands and engage audiences through 
-                platforms like Instagram, Facebook, and LinkedIn. This course covers content 
-                strategy, analytics, and ad campaigns to drive online success.</p>
-              <button class="btn enroll-btn">Enroll</button>
+              <div class="card" style="width: 18rem">
+                <img
+                  src="/E_Learning_System/assets/images/course 14.jpg"
+                  class="card-img-top"
+                  alt="SEO"
+                />
+                <div class="card-body text-center">
+                  <h5 class="card-title">Entrepreneurship</h5>
+                  <p class="card-text">
+                    Explore the mindset, tools, and strategies needed to turn
+                    ideas into impactful ventures. This course equips you with
+                    business planning, funding, and leadership skills.
+                  </p>
+                  <button class="btn enroll-btn">Enroll</button>
+                </div>
+              </div>
+
+              <div class="card" style="width: 18rem">
+                <img
+                  src="/E_Learning_System/assets/images/course 6.png"
+                  class="card-img-top"
+                  alt="React"
+                />
+                <div class="card-body text-center">
+                  <h5 class="card-title">React</h5>
+                  <p class="card-text">
+                    Learn how to build fast, interactive user interfaces with
+                    React, a powerful JavaScript library. This course covers
+                    components, hooks, and state management to create dynamic
+                    web apps.
+                  </p>
+                  <button class="btn enroll-btn">Enroll</button>
+                </div>
+              </div>
             </div>
           </div>
         </div>
+
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#courseCarousel"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#courseCarousel"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        </button>
       </div>
-
-      <div class="carousel-item">
-        <div class="d-flex justify-content-center gap-4 flex-wrap">
-          <div class="card" style="width: 18rem;">
-            <img src="/assets/images/course 12.png" class="card-img-top" alt="Node">
-            <div class="card-body text-center">
-              <h5 class="card-title">Figma</h5>
-              <p class="card-text">Dive into UI/UX design with Figma, a collaborative 
-                interface design tool. Learn to create wireframes, prototypes, and 
-                design systems for seamless user experiences.</p>
-              <button class="btn enroll-btn">Enroll</button>
-            </div>
-          </div>
-
-          <div class="card" style="width: 18rem;">
-            <img src="/assets/images/course 14.jpg" class="card-img-top" alt="SEO">
-            <div class="card-body text-center">
-              <h5 class="card-title">Entrepreneurship</h5>
-              <p class="card-text">Explore the mindset, tools, and strategies
-                 needed to turn ideas into impactful ventures. This course equips
-                  you with business planning, funding, and leadership skills.</p>
-              <button class="btn enroll-btn">Enroll</button>
-            </div>
-          </div>
-
-          <div class="card" style="width: 18rem;">
-            <img src="/assets/images/course 6.png" class="card-img-top" alt="React">
-            <div class="card-body text-center">
-              <h5 class="card-title">React</h5>
-              <p class="card-text">Learn how to build fast, interactive user interfaces with React,
-                 a powerful JavaScript library. This course covers components, hooks, and state management 
-                 to create dynamic web apps.</p>
-              <button class="btn enroll-btn">Enroll</button>
-            </div>
-          </div>
-        </div>
-      </div>
-
     </div>
 
-    <button class="carousel-control-prev" type="button" data-bs-target="#courseCarousel" data-bs-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#courseCarousel" data-bs-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    </button>
-  </div>
-</div>
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-
-</body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
 </html>
