@@ -5,9 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Login | E-Learning Platform</title>
 
-  <!-- Google Font: Lobster -->
   <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
-
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -21,7 +19,7 @@
     }
 
     .login-container {
-      background-color: rgba(22, 28, 93, 0.75); /* Deep navy with transparency */
+      background-color: rgba(22, 28, 93, 0.75);
       padding: 60px;
       border-radius: 12px;
       box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
@@ -33,13 +31,12 @@
     .login-container h1 {
       color: #f9f9f9;
       font-family: 'Lobster', cursive;
-      letter-spacing: 2px;
       font-size: 50px;
       margin-bottom: 35px;
     }
 
-    .login-container input[type="text"],
-    .login-container input[type="password"] {
+    input[type="text"],
+    input[type="password"] {
       width: 100%;
       padding: 14px;
       margin: 12px 0 20px;
@@ -47,10 +44,9 @@
       border-radius: 6px;
       font-size: 16px;
       background-color: #f0f4ff;
-      color: #111;
     }
 
-    .login-container input::placeholder {
+    input::placeholder {
       font-weight: bold;
       color: #444;
     }
@@ -67,11 +63,7 @@
       text-decoration: none;
     }
 
-    .forgot-password a:hover {
-      text-decoration: underline;
-    }
-
-    .login-container button {
+    button {
       width: 100%;
       padding: 14px;
       background-color: #2575fc;
@@ -80,10 +72,9 @@
       border-radius: 6px;
       font-size: 17px;
       cursor: pointer;
-      transition: background-color 0.3s;
     }
 
-    .login-container button:hover {
+    button:hover {
       background-color: #1a5fd6;
     }
 
@@ -98,8 +89,10 @@
       text-decoration: none;
     }
 
-    .register a:hover {
-      text-decoration: underline;
+    #loginError {
+      color: #ffb3b3;
+      font-size: 15px;
+      margin-bottom: 10px;
     }
   </style>
 </head>
@@ -107,18 +100,40 @@
 
   <div class="login-container">
     <h1>Login</h1>
-    <form action="/login" method="POST">
-      <input type="text" name="username" placeholder="Username or Email" required />
-      <input type="password" name="password" placeholder="Password" required />
+    <form id="loginForm">
+      <input type="text" id="username" placeholder="Username or Email" required />
+      <input type="password" id="password" placeholder="Password" required />
       <div class="forgot-password">
-        <a href="/forgot-password">Forgot Password?</a>
+        <a href="#">Forgot Password?</a>
       </div>
+      <div id="loginError"></div>
       <button type="submit">Login</button>
     </form>
     <div class="register">
-      <p>Don't have an account? <a href="/register">Register here</a></p>
+      <p>Don't have an account? <a href="register.html">Register here</a></p>
     </div>
   </div>
 
+  <script>
+    document.getElementById("loginForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+
+      const username = document.getElementById("username").value.trim();
+      const password = document.getElementById("password").value.trim();
+      const error = document.getElementById("loginError");
+
+      if (username === "" || password === "") {
+        error.textContent = "Please enter both username/email and password.";
+        return;
+      }
+
+      // Simulated login success
+      localStorage.setItem("isLoggedIn", "true");
+      localStorage.setItem("user", username);
+
+      alert("Login successful!");
+      window.location.href = "home.html";
+    });
+  </script>
 </body>
 </html>
