@@ -1,0 +1,77 @@
+[
+  {
+    "title": "JavaScript Essentials",
+    "category": "programming",
+    "description": "Learn the basics of JavaScript including syntax and DOM."
+  },
+  {
+    "title": "Advanced CSS",
+    "category": "design",
+    "description": "Master Flexbox, Grid, transitions, and responsive design."
+  },
+  {
+    "title": "SEO Fundamentals",
+    "category": "marketing",
+    "description": "Understand SEO basics and how to rank on search engines."
+  },
+  {
+    "title": "Startup Business 101",
+    "category": "business",
+    "description": "Build strong foundations for your business venture."
+  },
+  {
+    "title": "Python for Data Analysis",
+    "category": "data-science",
+    "description": "Analyze real-world data using Python and Pandas."
+  },
+  {
+    "title": "ReactJS Crash Course",
+    "category": "programming",
+    "description": "Build dynamic web apps using ReactJS and component-based architecture."
+  },
+  {
+    "title": "UI/UX Design Principles",
+    "category": "design",
+    "description": "Learn how to design intuitive and user-friendly interfaces."
+  },
+  {
+    "title": "Social Media Marketing",
+    "category": "marketing",
+    "description": "Grow your brand through effective social media strategies."
+  },
+  {
+    "title": "Business Analytics",
+    "category": "business",
+    "description": "Leverage data to make better business decisions."
+  },
+  {
+    "title": "Machine Learning Basics",
+    "category": "data-science",
+    "description": "Understand machine learning algorithms and model training."
+  },
+  {
+    "title": "Node.js & Express",
+    "category": "programming",
+    "description": "Create backend servers using Node.js and Express framework."
+  },
+  {
+    "title": "Figma for Beginners",
+    "category": "design",
+    "description": "Start designing UI mockups with Figma's collaborative tools."
+  },
+  {
+    "title": "Email Marketing Mastery",
+    "category": "marketing",
+    "description": "Craft effective email campaigns that convert."
+  },
+  {
+    "title": "Entrepreneurship Essentials",
+    "category": "business",
+    "description": "Explore what it takes to start and sustain a successful startup."
+  },
+  {
+    "title": "Data Visualization with Tableau",
+    "category": "data-science",
+    "description": "Turn raw data into compelling visual stories using Tableau."
+  }
+]
