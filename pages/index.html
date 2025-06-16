@@ -49,7 +49,7 @@
       height: 50px;
     }
 
-    .hero {
+        .hero {
       background-image: url('/assets/landing poster2.jpg');
       background-size: cover;
       background-position: center;
@@ -61,36 +61,37 @@
       text-align: center;
       position: relative;
     }
-
+    
     .hero::before {
       content: "";
       position: absolute;
       inset: 0;
-      background-color: rgba(0, 0, 0, 0.5); /* Optional dark overlay for readability */
+      background-color: rgba(0, 0, 0, 0.5); /* Optional dark overlay */
       z-index: 1;
     }
-
+    
     .hero-content {
       position: relative;
       z-index: 2;
       max-width: 800px;
       padding: 20px;
-      color: #000; /* Changed from white to black */
       text-align: center;
+      color: #000; /* Make content black */
     }
-
+    
     .hero h1 {
       font-size: 5rem;
       margin-bottom: 16px;
       font-weight: bold;
-      color: #000; /* Explicitly set black for heading */
+      color: #000;
     }
-
+    
     .hero p {
       font-size: 2rem;
-      margin-bottom: 24px;
-      color: #000; /* Explicitly set black for paragraph */
+      margin: 0;
+      color: #000;
     }
+
 
 
     .btn-primary {
@@ -272,10 +273,13 @@
   </nav>
 
   <!-- Hero -->
-  <section class="hero">
-    <h1>Welcome to UpSkill</h1>
-    <p>Creating Opportunities • Discovering You</p>
-  </section>
+    <section class="hero">
+      <div class="hero-content">
+        <h1>Welcome to UpSkill</h1>
+        <p>Creating Opportunities • Discovering You</p>
+      </div>
+    </section>
+
 
   <!-- Featured Courses -->
   <section class="courses-section" id="courses">
