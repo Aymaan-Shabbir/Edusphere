@@ -5,14 +5,16 @@ function renderCourses(filter = "all") {
   const courseList = document.getElementById("courseList");
   courseList.innerHTML = "";
 
-  const filtered = filter === "all" ? courses : courses.filter(c => c.category === filter);
+  const filtered =
+    filter === "all" ? courses : courses.filter((c) => c.category === filter);
 
   if (filtered.length === 0) {
-    courseList.innerHTML = "<p class='text-muted'>No courses found in this category.</p>";
+    courseList.innerHTML =
+      "<p class='text-muted'>No courses found in this category.</p>";
     return;
   }
 
-  filtered.forEach(course => {
+  filtered.forEach((course) => {
     const col = document.createElement("div");
     col.className = "col-md-4 mb-4";
 
@@ -33,16 +35,15 @@ function renderCourses(filter = "all") {
     courseList.appendChild(col);
   });
 
-  // Attach modal functionality to preview buttons
   attachPreviewEventListeners();
 }
 
 // Loads courses from JSON file
-async function loadCourses() {
+async function loadCourses(filter = "all") {
   try {
     const res = await fetch("../data/courses.json");
     courses = await res.json();
-    renderCourses();
+    renderCourses(filter);
   } catch (err) {
     console.error("Failed to load courses:", err);
   }
@@ -53,14 +54,13 @@ function attachPreviewEventListeners() {
   const buttons = document.querySelectorAll(".preview-btn");
   const videoFrame = document.getElementById("videoFrame");
 
-  buttons.forEach(button => {
+  buttons.forEach((button) => {
     button.addEventListener("click", () => {
       const videoUrl = button.getAttribute("data-video");
       videoFrame.src = videoUrl;
     });
   });
 
-  // Clear video when modal is closed
   const videoModal = document.getElementById("videoModal");
   videoModal.addEventListener("hidden.bs.modal", () => {
     videoFrame.src = "";
@@ -69,9 +69,38 @@ function attachPreviewEventListeners() {
 
 // Initialization
 document.addEventListener("DOMContentLoaded", () => {
-  document.getElementById("categoryFilter").addEventListener("change", e => {
+  const filterSelect = document.getElementById("categoryFilter");
+
+  // Get category from URL if present
+  const urlParams = new URLSearchParams(window.location.search);
+  const categoryFromURL = urlParams.get("category");
+
+  if (categoryFromURL) {
+    filterSelect.value = categoryFromURL;
+    loadCourses(categoryFromURL); // Apply filter on load
+  } else {
+    loadCourses(); // No filter
+  }
+
+  // Dropdown filter listener
+  filterSelect.addEventListener("change", (e) => {
     renderCourses(e.target.value);
   });
-
-  loadCourses();
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+  const loggedInUser = JSON.parse(localStorage.getItem("loggedInUser"));
+  if (loggedInUser) {
+    document.getElementById("userName").textContent = loggedInUser.name;
+    document.getElementById("userRole").textContent = loggedInUser.role;
+  }
+
+  document.getElementById("logoutBtn").addEventListener("click", () => {
+    localStorage.removeItem("loggedInUser");
+    window.location.href = "/E_Learning_System/pages/login.html";
+  });
+});
+function logout() {
+  localStorage.removeItem("loggedInUser");
+  window.location.href = "login.html";
+}
